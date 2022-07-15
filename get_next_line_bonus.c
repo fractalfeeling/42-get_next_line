@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lwee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/22 11:53:03 by lwee              #+#    #+#             */
-/*   Updated: 2022/07/15 18:11:48 by lwee             ###   ########.fr       */
+/*   Created: 2022/07/15 16:33:35 by lwee              #+#    #+#             */
+/*   Updated: 2022/07/15 16:33:37 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	find_newline(char *str)
 {
@@ -82,18 +82,18 @@ char	*get_line(char **storage)
 
 char	*get_next_line(int fd)
 {
-	static char	*storage;
+	static char	*storage[FD_SIZE];
 	char		*line;
 
 	line = NULL;
 	if (fd < 0 || fd > FD_SIZE)
 		return (NULL);
-	read_line(fd, &storage);
-	if (storage && *storage)
-		line = get_line(&storage);
+	read_line(fd, &storage[fd]);
+	if (storage[fd] && *storage[fd])
+		line = get_line(&storage[fd]);
 	if (!line || *line == '\0')
 	{
-		ft_free_str(&storage);
+		ft_free_str(&storage[fd]);
 		ft_free_str(&line);
 		return (NULL);
 	}
