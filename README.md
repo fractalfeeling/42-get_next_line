@@ -4,8 +4,6 @@
 ## Introduction
 May it be a file, stdin, or even later a network connection, you will always need a way to read content line by line. It is time to start working on this function, which will be essential for your future projects.
 
-## Outline
-
 ## Functions Overview
 
 get_next_line functions
@@ -24,3 +22,7 @@ get_next_line utility functions
 | `ft_strjoin` | Allocates memory and joins two strings. 
 | `ft_substr` | Allocates memory and returns a substring from a string. |
 | `ft_free_str` | Safe memory free. |
+
+## Resources
+* [get_next_line subject document](https://github.com/fractalfeeling/uploads/blob/master/docs/get_next_line.pdf)
+* [francinette](https://github.com/xicodomingues/francinette) tester by *xicodomingues*
