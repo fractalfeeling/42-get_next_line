@@ -6,7 +6,7 @@
 /*   By: lwee <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 16:33:35 by lwee              #+#    #+#             */
-/*   Updated: 2022/07/15 16:33:37 by lwee             ###   ########.fr       */
+/*   Updated: 2022/07/18 11:04:54 by lwee             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	*get_next_line(int fd)
 	char		*line;
 
 	line = NULL;
-	if (fd < 0 || fd > FD_SIZE)
+	if (fd < 0 || fd > FD_SIZE || BUFFER_SIZE <= 0)
 		return (NULL);
 	read_line(fd, &storage[fd]);
 	if (storage[fd] && *storage[fd])
