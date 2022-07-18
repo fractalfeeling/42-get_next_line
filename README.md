@@ -9,7 +9,7 @@ May it be a file, stdin, or even later a network connection, you will always nee
 get_next_line functions
 | Function | Description |
 | :------: | :---------: |
-| `find_newline` | Scans string for `'\n'`. Returns `0` if found, otherwise `-1` |
+| `find_newline` | Scans string for `'\n'`. Returns `0` if found, otherwise `-1`. |
 | `read_line` | Reads `BUFFER_SIZE` bytes from `fd` and stores in `storage`. Stops reading when the last read contains a newline. |
 | `get_line` | Returns line from `storage`, remaining characters after `'\n'` is stored back into `storage`. |
 | `get_next_line` | Returns line or `NULL` if error or nothing left to read. |
