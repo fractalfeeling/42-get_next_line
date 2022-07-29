@@ -1,4 +1,4 @@
-8 i7# get_next_line
+# get_next_line
 *Reading a line from a fd is way too tedious*
 
 ## Introduction
@@ -24,7 +24,7 @@ get_next_line utility functions
 | `ft_free_str` | Safe memory free. |
 
 ## Score
-![lwee's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cl5pppwsq001109mdiigy33za/project/2579593)](https://github.com/JaeSeoKim/badge42)
+[![lwee's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cl5pppwsq001109mdiigy33za/project/2579593)](https://github.com/JaeSeoKim/badge42)
 
 ## Resources
 * [get_next_line subject document](https://github.com/fractalfeeling/uploads/blob/master/docs/get_next_line.pdf)
